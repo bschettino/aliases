@@ -18,6 +18,8 @@ alias gst='git stash'
 alias gstp='git stash pop'
 alias grb='git rebase'
 alias grbd='git rebase development'
+alias grbm='git rebase master'
+alias grbc='git rebase --continue'
 alias gl='git log'
 alias glol='git log --oneline'
 
