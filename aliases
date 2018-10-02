@@ -43,6 +43,7 @@ alias rdbr='rake db:rollback'
 alias rdbmr='rake db:migrate:redo'
 alias rdbs='rake db:seed' 
 alias rdbf='rake db:drop; rake db:create; rake db:migrate'
+alias rdbre='rake db:reset'
 
 #Rubocop aliases
 alias rbc='rubocop'
@@ -55,6 +56,3 @@ alias bu='bundle update'
 alias nw='npm run watch'
 alias nd='npm run deploy'
 
-#Heroku aliases
-alias hrcrh='heroku run rails c --app pagnet-rh'
-alias hrcrhs='heroku run rails c --app pagnet-rh-staging'
