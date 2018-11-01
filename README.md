@@ -1,4 +1,4 @@
-# aliases
+# My aliases
 
 Simple aliases for working with git, rails and node
 
