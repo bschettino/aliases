@@ -47,6 +47,7 @@ alias rdbre='rake db:reset'
 
 # Rubocop aliases
 alias rbc='rubocop'
+alias rbca='rubocop -a'
 
 # Bundle aliases
 alias bi='bundle install'
