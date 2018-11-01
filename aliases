@@ -1,4 +1,4 @@
-#Git aliases
+# Git aliases
 alias gs='git status'
 alias gc='git commit'
 alias gca='git commit --amend'
@@ -23,14 +23,14 @@ alias grbc='git rebase --continue'
 alias gl='git log'
 alias glol='git log --oneline'
 
-#Gitflow aliases
+# Gitflow aliases
 alias gff='git flow feature'
 alias gffs='git flow feature start'
 alias gfff='git flow feature finish'
 alias gfhs='git flow hotfix start'
 alias gfhf='git flow hotfix finish'
 
-#Rails aliases
+# Rails aliases
 alias rc='rails console'
 alias rs='rails server'
 alias rg='rails generate'
@@ -45,14 +45,14 @@ alias rdbs='rake db:seed'
 alias rdbf='rake db:drop; rake db:create; rake db:migrate'
 alias rdbre='rake db:reset'
 
-#Rubocop aliases
+# Rubocop aliases
 alias rbc='rubocop'
 
-#Bundle aliases
+# Bundle aliases
 alias bi='bundle install'
 alias bu='bundle update'
 
-#Node aliases
+# Node aliases
 alias nw='npm run watch'
 alias nd='npm run deploy'
 
