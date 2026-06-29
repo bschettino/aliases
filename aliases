@@ -3,9 +3,10 @@ alias gir='git'
 alias gs='git status'
 alias gc='git commit'
 alias gca='git commit --amend'
+alias gcane='git commit --amend --no-edit'
 alias gd='git diff'
 alias gr='git reset'
-alias gck='git checkout'
+alias gco='git checkout'
 alias gckm='git checkout master'
 alias gckma='git checkout main'
 alias gckqa='git checkout qa'
@@ -24,6 +25,7 @@ alias gpstest='git push origin server/daasity-testing'
 alias gpsstg='git push origin staging'
 alias gpspp='git push origin pre_production'
 alias gpl='git pull'
+alias gplf='git reset --hard origin/$(git branch --show-current)'
 alias gb="git branch"
 alias gst='git stash'
 alias gstp='git stash pop'
@@ -35,6 +37,8 @@ alias gma='git merge --abort'
 alias grb='git rebase'
 alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gpsupd='git push --set-upstream origin $(git_current_branch) -o merge_request.create -o merge_request.draft' 
 
 # Rails aliases
 alias rc='bundle exec rails console'
@@ -69,3 +73,22 @@ alias be='bundle exec'
 # Node aliases
 alias nw='npm run watch'
 alias nd='npm run deploy'
+
+# Kubernetes
+kcoreconsole() {
+  kubectl exec -it $(kubectl get pods | grep app-core-rails-console | awk '{print $1}') -- bash
+}
+
+kchatconsole() {
+  kubectl exec -it $(kubectl get pods | grep app-pipefy-ai-chat-rails-console | awk '{print $1}') -- bash
+}
+
+alias reload-kafka-host="sudo sh ~/host_kafka_script.sh"
+loginvpn() {
+  sudo openfortivpn -c /etc/openfortivpn/my-config <<< $1
+}
+
+pipe-ai-local-console() {
+  cd $HOME/pipefy-workspace/pipefy-ai;
+  docker compose run --rm web bash 
+}
